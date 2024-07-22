@@ -11,6 +11,8 @@ class PageController extends Controller
 
         $trains = Train::whereDate('departure_time', today())->get();
 
+        //dump($trains);
+
         return view('home', compact('trains'));
     }
 }
